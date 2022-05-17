@@ -1,0 +1,12 @@
+<div class="container top-container">
+<h1 class='wikinimous'>Wikinimous</h1>
+<%= link_to "Create Article", new_article_path %>
+</div>
+<div class="container articles-container">
+</ul>
+<% @articles.each do |article| %>
+<li><%= link_to article.title, article_path(article), class: 'title' %></li>
+<li class='content'><%= article.content %></li>
+<% end %>
+<ul>
+</div>
